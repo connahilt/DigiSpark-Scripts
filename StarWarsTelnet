@@ -1,0 +1,47 @@
+#include "DigiKeyboard.h"
+
+void setup() {
+  // don't need to set anything up to use DigiKeyboard
+}
+
+
+void loop() {
+//Opens Command Prompt
+  DigiKeyboard.delay(2000);
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay(600);
+  DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(1000); 
+  DigiKeyboard.print("cmd");
+  DigiKeyboard.delay(600);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER); 
+   DigiKeyboard.delay(600);
+   //Gets the Telnet Client going
+  DigiKeyboard.print("pkgmgr /iu:\"TelnetClient\"");
+  DigiKeyboard.delay(600);
+DigiKeyboard.sendKeyStroke(KEY_ENTER); 
+  DigiKeyboard.delay(1200);
+  DigiKeyboard.print("exit");
+    DigiKeyboard.delay(600);
+DigiKeyboard.sendKeyStroke(KEY_ENTER); 
+  DigiKeyboard.delay(1200);
+   //Opens a fresh instance of Command Prompt
+   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
+  DigiKeyboard.delay(1000); 
+  DigiKeyboard.print("cmd");
+  DigiKeyboard.delay(600);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER); 
+   DigiKeyboard.delay(600);
+   //Connects to the server with the Star Wars ASCII
+   DigiKeyboard.print("Telnet Towel.blinkenlights.nl");
+ DigiKeyboard.delay(600);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER); 
+  
+  
+ 
+
+  
+  DigiKeyboard.delay(50000000000000000);
+ 
+  DigiKeyboard.delay(5000);
+}
